@@ -1,4 +1,4 @@
-package is.ru.honn.service.Exceptions;
+package is.ru.honn.rutube.service.Exceptions;
 
 /**
  * Created by Maggi on 21/09/16.

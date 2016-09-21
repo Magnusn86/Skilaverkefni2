@@ -1,4 +1,4 @@
-package is.ru.honn.service;
+package is.ru.honn.rutube.service;
 
 import java.net.URL;
 import java.util.List;
@@ -11,7 +11,8 @@ public class Video {
     public int videoId;
     public String title;
     public String description;
-    public URL src;
+    //ATH hvort hægt er að nota URL í stað String
+    public String src;
     public String type;
     public List<String> tags;
 

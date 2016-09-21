@@ -1,4 +1,4 @@
-package is.ru.honn.service;
+package is.ru.honn.rutube.service;
 
 import java.util.Date;
 import java.util.List;
