@@ -1,4 +1,4 @@
-package is.ru.honn;
+package is.ru.honn.service;
 
 import java.util.Date;
 import java.util.List;
