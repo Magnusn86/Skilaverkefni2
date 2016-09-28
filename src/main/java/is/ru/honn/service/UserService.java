@@ -1,6 +1,7 @@
 package is.ru.honn.service;
 
 import is.ru.honn.domain.User;
+import is.ru.honn.service.Exceptions.ServiceException;
 
 import java.util.List;
 

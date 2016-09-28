@@ -1,4 +1,4 @@
-package is.ru.honn.reader;
+package is.ru.honn.reader.Exceptions;
 
 public class ReaderException extends Exception
 {

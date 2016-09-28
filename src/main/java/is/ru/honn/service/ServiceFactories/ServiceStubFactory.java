@@ -1,4 +1,7 @@
-package is.ru.honn.service;
+package is.ru.honn.service.ServiceFactories;
+
+import is.ru.honn.service.ServiceStubs.UserServiceStub;
+import is.ru.honn.service.ServiceStubs.VideoServiceStub;
 
 /**
  * Created by Maggi on 28/09/16.

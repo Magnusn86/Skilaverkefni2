@@ -1,7 +1,9 @@
-package is.ru.honn.reader;
+package is.ru.honn.reader.Readers;
 
 import is.ru.honn.domain.User;
 import is.ru.honn.domain.Video;
+import is.ru.honn.reader.AbstractReader;
+import is.ru.honn.reader.ClientRequest;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONValue;

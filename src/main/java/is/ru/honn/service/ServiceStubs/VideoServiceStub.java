@@ -1,8 +1,11 @@
-package is.ru.honn.service;
+package is.ru.honn.service.ServiceStubs;
 
 
 import is.ru.honn.domain.User;
 import is.ru.honn.domain.Video;
+import is.ru.honn.service.Exceptions.ServiceException;
+import is.ru.honn.service.ServiceFactories.ServiceStubFactory;
+import is.ru.honn.service.VideoService;
 
 import java.util.ArrayList;
 import java.util.List;

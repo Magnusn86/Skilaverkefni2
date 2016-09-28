@@ -1,4 +1,4 @@
-package is.ru.honn.service;
+package is.ru.honn.service.Exceptions;
 
 /**
  * Created by Maggi on 21/09/16.
