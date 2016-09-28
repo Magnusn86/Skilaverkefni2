@@ -1,6 +1,6 @@
-package is.ru.honn.rutube.service;
+package is.ru.honn.service;
 
-import is.ru.honn.rutube.service.Exceptions.ServiceException;
+import is.ru.honn.domain.User;
 
 import java.util.List;
 
