@@ -18,7 +18,7 @@ public class ReaderTest extends TestCase {
         Reader reader = factory.getReader("videoReader");
 
        // reader.setReadHandler(this);
-        reader.read();
+        //reader.read();
 
 
     }
