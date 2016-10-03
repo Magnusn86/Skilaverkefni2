@@ -5,7 +5,7 @@ package is.ru.honn.reader;
  */
 public interface ReadHandler
 {
-    public void read(int count, Object object);
+    public void read(int count, Object object, String readerType);
 }
 
 
