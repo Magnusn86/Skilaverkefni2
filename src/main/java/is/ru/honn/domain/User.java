@@ -4,6 +4,9 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Simple POJO class for Users in the application
+ */
 public class User {
 
     private int userId;
@@ -14,6 +17,7 @@ public class User {
     private LocalDate birthDate;
     private List<Video> videos;
 
+    //Constructor that sets all variables except the vides
     public User(int userId, String firstName, String lastName, String email, String displayName, String birthDate) {
         this.userId = userId;
         this.firstName = firstName;

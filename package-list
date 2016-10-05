@@ -1,0 +1,11 @@
+is.ru.honn.Observer
+is.ru.honn.domain
+is.ru.honn.process
+is.ru.honn.reader
+is.ru.honn.reader.Exceptions
+is.ru.honn.reader.Factories
+is.ru.honn.reader.ReadHandlerImplementation
+is.ru.honn.reader.Readers
+is.ru.honn.service
+is.ru.honn.service.Exceptions
+is.ru.honn.service.ServiceStubs

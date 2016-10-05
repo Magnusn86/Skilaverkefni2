@@ -1,11 +1,18 @@
 package is.ru.honn.reader;
 
+
 /**
- * Created by Maggi on 21/09/16.
+ * A interface for ReadHandlers they are used to save objects to database, read the JSON string and parse it.
  */
 public interface ReadHandler
 {
-    public void read(int count, Object object, String readerType);
+
+    /**
+     * Iterates through the object and saves the object to a database
+     * @param count number of instances in the object
+     * @param object the object to be saved
+     */
+    public void read(int count, Object object);
 }
 
 

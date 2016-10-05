@@ -2,6 +2,9 @@ package is.ru.honn.domain;
 
 import java.util.List;
 
+/**
+ * Simple POJO class for the Video in the application
+ */
 
 public class Video {
 

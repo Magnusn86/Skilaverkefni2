@@ -1,57 +1,50 @@
 package is.ru.honn.reader.ReadHandlerImplementation;
 
 import is.ru.honn.domain.User;
-import is.ru.honn.domain.Video;
-import is.ru.honn.reader.Exceptions.ReaderException;
-import is.ru.honn.reader.Factories.ReaderFactory;
 import is.ru.honn.reader.ReadHandler;
-import is.ru.honn.reader.Reader;
 import is.ru.honn.service.Exceptions.ServiceException;
-import is.ru.honn.service.ServiceFactories.ServiceStubFactory;
+import is.ru.honn.service.ServiceStubs.UserServiceStub;
+import is.ru.honn.service.ServiceStubs.VideoServiceStub;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 /**
- * Created by Maggi on 28/09/16.
+ * The implementation of ReadHandler to read the Users and videos from the JSON file / URI
  */
 public class ReadHandlerImp implements ReadHandler {
 
-    ReaderFactory factory = new ReaderFactory();
-    ServiceStubFactory serviceStubFactory = new ServiceStubFactory();
+    UserServiceStub userServiceStub;
+    VideoServiceStub videoServiceStub;
+    public ReadHandlerImp() {
+        this.userServiceStub = new UserServiceStub();
+        this.videoServiceStub = new VideoServiceStub(userServiceStub);
+    }
 
-    public void read(int count, Object object, String readerType) {
+
+    /**
+     * Adds the objects from the parameter from the functions and saves them to the "database"
+     * in this case that is the appropriate service. This function is called from AbstractReader function read()
+     *
+     * @param count number of objects in the object parameter
+     * @param object is the object to add to the database
+     */
+    public void read(int count, Object object) {
 
 
-        if(readerType.equals("videoReader") || readerType.equals("userReader")) {
+        List<User> users;
 
-            Reader reader = factory.getReader(readerType);
+        users = (List<User>) object;
 
-            List<Object> result = new ArrayList<>();
-            reader.setReadHandler(this);
+
+        for(User u : users) {
             try {
-                result = (ArrayList) reader.read();
-            } catch (ReaderException e) {
+                userServiceStub.addUser(u);
+            } catch (ServiceException e ) {
                 e.printStackTrace();
+                System.out.println(e.getMessage());
             }
-
-            try {
-                if(readerType.equals("userReader")) {
-                    for(Object o :  result) {
-                        serviceStubFactory.getUserServiceStub().addUser( (User) o);
-                    }
-                } else if(readerType.equals("videoReader")) {
-                    for(Object o : result) {
-                        //VEIT EKKI HVAÐ Á AÐ GERA VARÐANDI USER ID HÉR
-                        serviceStubFactory.getVideoServiceStub().addVideo((Video) o, 0);
-                    }
-                }
-            } catch (ServiceException e) {
-                e.printStackTrace();
-            }
-
         }
+
     }
 
 

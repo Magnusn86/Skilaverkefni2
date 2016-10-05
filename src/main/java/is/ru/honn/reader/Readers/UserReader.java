@@ -11,10 +11,15 @@ import org.json.simple.JSONValue;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * UserReader implements the parse function for Users, it parses a JSON string to
+ * User object and returns it
+ */
 public class UserReader extends AbstractReader {
 
+    //To be able to parse the videos of each user from the JSON string
     private VideoReader videoReader;
-
+    //Constructor with dependency injection
     public UserReader(VideoReader videoReader){
         this.videoReader = videoReader;
     }

@@ -10,12 +10,21 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
+/**
+ * This class is used to retrieve a JSON string from a URI or file
+ */
 public class ClientRequest
 {
     public ClientRequest()
     {
     }
 
+
+    /**
+     * Retrieves a JSON string from the url parameter
+     * @param url the URI where the JSON file is located
+     * @return returns the JSON string from the requested URI
+     */
     public String getRequest(String url)
     {
         Client client = ClientBuilder.newClient();
@@ -27,6 +36,12 @@ public class ClientRequest
         return result;
     }
 
+    /**
+     * Retrieves a JSON file from a local file and returns the content as a JSON string
+     * @param fileName of the file to retrieve the content from
+     * @return returns a  JSON string with the contens of the file
+     * @throws ReaderException is thrown if it is unable to open or read file
+     */
     public String getFileContent(String fileName) throws ReaderException
     {
         StringBuilder content = new StringBuilder();

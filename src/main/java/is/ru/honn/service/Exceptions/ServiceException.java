@@ -1,7 +1,7 @@
 package is.ru.honn.service.Exceptions;
 
 /**
- * Created by Maggi on 21/09/16.
+ * Service Exception is used in the service package
  */
 public class ServiceException extends Exception {
 

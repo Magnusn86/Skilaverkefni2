@@ -9,10 +9,13 @@ import org.json.simple.JSONValue;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Implements the parse method of AbstractReader, gets a JSON string with videos and creates Video objects from the
+ * JSON string and returns them
+ */
 public class VideoReader extends AbstractReader {
 
     public VideoReader(){}
-
 
     /**
      * Walks through a json array of videos and maps it to a object which is a list of videos.
